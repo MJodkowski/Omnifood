@@ -72,7 +72,7 @@ function scrollHandler() {
     if (window.scrollY >= 0.8 * sectionSteps.offsetTop) {
         phoneImg.classList.remove('section-steps--phone-before-scroll', 'see-through');
     }
-    if (window.scrollY >= 0.8 * sectionCities.offsetTop) {
+    if (window.scrollY >= 0.9 * sectionCities.offsetTop) {
         sectionCitiesContainer.classList.remove('see-through');
     }
 }

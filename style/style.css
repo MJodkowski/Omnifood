@@ -173,7 +173,7 @@ section {
     border-bottom: 2px solid transparent;
 }
 
-.nav-button:hover {
+.nav--button:hover {
     border-bottom: 2px solid #e67e22;
     cursor: pointer;
 }

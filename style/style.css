@@ -250,7 +250,7 @@ section {
     }
 
     .nav--button:hover {
-        border-bottom: none;
+        border-bottom: transparent;
     }
 
     .nav-fixed--buttons-open {

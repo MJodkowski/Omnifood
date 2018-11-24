@@ -249,6 +249,10 @@ section {
         transform: translateY(0vh);
     }
 
+    .nav--button:hover {
+        border-bottom: none;
+    }
+
     .nav-fixed--buttons-open {
         transform: translateY(0vh);
     }

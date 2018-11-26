@@ -199,6 +199,14 @@ section {
     line-height: 3rem;
 }
 
+.nav-fixed .nav--logo-white {
+    display: none;
+}
+
+.nav-fixed .nav--logo-black {
+    display: block;
+}
+
 .nav--logo-black {
     height: 3rem;
     width: auto;
@@ -206,10 +214,12 @@ section {
 
 .nav--icon {
     font-size: 3rem;
-    display: block;
     color: white;
     display: none;
     height: 6vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 
 .nav-fixed .nav--icon {
@@ -217,12 +227,22 @@ section {
 }
 
 @media (max-width: 700px) {
-    .nav--icon {
+    .ion-md-menu {
         position: relative;
         z-index: 2;
         display: flex;
-        justify-content: center;
-        align-items: center;
+    }
+
+    .nav--open .ion-md-menu {
+        display: none;
+    }
+    
+    .nav--open .ion-md-close {
+        display: flex;
+    }
+
+    .nav--open .nav--buttons {
+        transform: translateY(0vh);
     }
 
     .nav--buttons {
@@ -238,23 +258,15 @@ section {
         transition: transform 0.2s ease;
     }
 
-    .nav--buttons-fixed {
+    .nav-fixed .nav--buttons {
         top: 0;
         background-color: white;
         opacity: 0.98;
         box-shadow: 0px 2px 2px 0px rgba(216, 216, 216, 0.7);
     }
 
-    .nav--buttons-open {
-        transform: translateY(0vh);
-    }
-
     .nav--button:hover {
-        border-bottom: transparent;
-    }
-
-    .nav-fixed--buttons-open {
-        transform: translateY(0vh);
+        border-color: white;
     }
 
     .nav-fixed {

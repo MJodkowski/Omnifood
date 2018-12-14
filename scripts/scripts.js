@@ -4,7 +4,7 @@ const NAVHEIGHT = 0.1;
     sectionOverview = document.querySelector('.section-overview'),
     sectionOverviewContainer = document.querySelector('.section-overview--container'),
     sectionSteps = document.querySelector('.section-steps'),
-    phoneImg = document.querySelector('.section-steps--phoneimg'),
+    phoneImg = document.querySelector('.section-steps--phone-img'),
     sectionCities = document.querySelector('.section-cities'),
     sectionCitiesContainer = document.querySelector('.section-cities--image-row'),
     sectionPlans = document.querySelector('.section-plans');
@@ -13,7 +13,6 @@ const NAVHEIGHT = 0.1;
     heroButtons = document.querySelector('.header--hero-button-container'),
     hamburgerButton = document.querySelectorAll('.nav--icon');
 
-// make passive
 window.addEventListener('scroll', scrollHandler);
 window.addEventListener('scroll', scrollHandlerPlans);
 navButtons.addEventListener('click', (e) => navHandler(e));

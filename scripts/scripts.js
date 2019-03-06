@@ -1,17 +1,17 @@
-const NAVHEIGHT = 0.1;
+const NAVHEIGHT = 0.1,
     header = document.querySelector('.header'),
     nav = document.querySelector('nav'),
-    sectionOverview = document.querySelector('.section-overview'),
-    sectionOverviewContainer = document.querySelector('.section-overview--container'),
-    sectionSteps = document.querySelector('.section-steps'),
-    phoneImg = document.querySelector('.section-steps--phone-img'),
-    sectionCities = document.querySelector('.section-cities'),
-    sectionCitiesContainer = document.querySelector('.section-cities--image-row'),
-    sectionPlans = document.querySelector('.section-plans');
-    sectionPlansContainer = document.querySelector('.section-plans--plan-container'),
-    navButtons = document.querySelector('.nav--buttons'),
-    heroButtons = document.querySelector('.header--hero-button-container'),
-    hamburgerButton = document.querySelectorAll('.nav--icon');
+    overview = document.querySelector('.overview'),
+    overviewContainer = document.querySelector('.overview__container'),
+    steps = document.querySelector('.steps'),
+    phoneImg = document.querySelector('.phone-img'),
+    cities = document.querySelector('.cities'),
+    citiesContainer = document.querySelector('.cities__image-row'),
+    plans = document.querySelector('.plans'),
+    plan = document.querySelector('.plan'),
+    navButtons = document.querySelector('.nav__buttons'),
+    heroButtons = document.querySelector('.header__hero-button-container'),
+    hamburgerButton = document.querySelectorAll('.nav__icon');
 
 window.addEventListener('scroll', scrollHandler);
 window.addEventListener('scroll', scrollHandlerPlans);
@@ -44,32 +44,32 @@ function navHandler(e) {
 
 function scrollHandler() {
     displayNav();
-    if (window.scrollY >= 0.5 * sectionOverview.offsetTop) {
-        sectionOverviewContainer.classList.remove('see-through');
+    if (window.scrollY >= 0.5 * overview.offsetTop) {
+        overviewContainer.classList.remove('see-through');
     }
-    if (window.scrollY >= 0.8 * sectionSteps.offsetTop) {
-        phoneImg.classList.remove('section-steps--phone-before-scroll', 'see-through');
+    if (window.scrollY >= 0.8 * steps.offsetTop) {
+        phoneImg.classList.remove('phone--before-scroll', 'see-through');
     }
-    if (window.scrollY >= 0.9 * sectionCities.offsetTop) {
-        sectionCitiesContainer.classList.remove('see-through');
+    if (window.scrollY >= 0.9 * cities.offsetTop) {
+        citiesContainer.classList.remove('see-through');
     }
 }
 
 function scrollHandlerPlans() {
-    if (window.scrollY >= 0.9 * sectionPlans.offsetTop) {
-        sectionPlansContainer.classList.add('large');
+    if (window.scrollY >= 0.9 * plans.offsetTop) {
+        plan.classList.add('large');
         setTimeout(() => {
-            sectionPlansContainer.classList.remove('large');
+            plan.classList.remove('large');
             window.removeEventListener('scroll', scrollHandlerPlans);
         }, 500);
     }
 }
 
 function displayNav() {
-    if (window.scrollY >= sectionOverview.offsetTop - NAVHEIGHT * window.innerHeight && !nav.classList.contains('nav-fixed')) {
-        nav.classList.toggle('nav-fixed');
-    } else if (window.scrollY < sectionOverview.offsetTop - NAVHEIGHT * window.innerHeight && nav.classList.contains('nav-fixed')) {
-        nav.classList.toggle('nav-fixed');
+    if (window.scrollY >= overview.offsetTop - NAVHEIGHT * window.innerHeight && !nav.classList.contains('nav--fixed')) {
+        nav.classList.toggle('nav--fixed');
+    } else if (window.scrollY < overview.offsetTop - NAVHEIGHT * window.innerHeight && nav.classList.contains('nav--fixed')) {
+        nav.classList.toggle('nav--fixed');
     }
 }
 
